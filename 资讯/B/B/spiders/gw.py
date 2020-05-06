@@ -9,7 +9,9 @@ class GwSpider(CrawlSpider):
     start_urls = ['http://www.stdaily.com/']
 
     rules = (
-        Rule(LinkExtractor(allow=r'.*.shtml'), callback='parse_item', follow=True),
+        # Rule(LinkExtractor(allow=r'.*.shtml'),callback='parse_item',  follow=True),
+
+
 
     )
     n = 0
@@ -23,4 +25,5 @@ class GwSpider(CrawlSpider):
             print(response)
 
         print(self.n)
+
 
